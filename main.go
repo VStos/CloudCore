@@ -1,7 +1,7 @@
 package main
 
 import (
-	
+	"grpc/sserver/OOptions"
 )
 
 func main() {
@@ -13,6 +13,6 @@ func main() {
 
     // TODO: запустить gRPC-сервер приложения
 
-	grpcServerOption Options
+	grpcServerOption   OOptions
 
 }
