@@ -29,7 +29,7 @@ message RegisterRequest {
   
   // Объект, который метод (ручка) вернёт.
   message RegisterResponse {
-    bytes err_id = 1; // Eroor ID of the registered user.
+    int64 user_id = 1; // Eroor ID of the registered user.
   }
 
   message LoginRequest {
