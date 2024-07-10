@@ -40,5 +40,5 @@ func (s *serverAPI) Login(ctx context.Context, in *grpc_v1.LoginRequest) (*grpc_
 
 func (s *serverAPI) Register(ctx context.Context, in *grpc_v1.RegisterRequest) (*grpc_v1.RegisterResponse, error) {
 	user_id, err := s.auth.RegisterNewUser(ctx, in.GetEmail(), in.GetPassword())
-	return user_id, err
+	return &grpc_v1.RegisterResponse{UserId: user_id}, err
 }
